@@ -1,0 +1,13 @@
+1) words vs keyword
+
+js me aise words jin se kuchh hu sakta hai, wo sare words js ke keywords hai.
+special word jiska ek specific meaning huta
+eg: if,for,function
+
+2) variable & declaration
+
+data ko store karne ke liye variable ka use huta hai.
+var, let, const
+var purana hai use nahi karenge
+let jab humein bad me uski value change karne paregi.
+const fix value jo change nahi hu skti

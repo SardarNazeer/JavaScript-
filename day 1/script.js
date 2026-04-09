@@ -21,7 +21,7 @@ var a = 13;  // declare & initialize the value
 // scope mean var kaha tak use hu skta 
 // apne function ke ander var banaya wo srf function me use huga or use hum kahenge functional scope 
 // apne func ke bahir var banaya usko hum pure code me use kr skty hai global scope
-// curly braces {} ke ander var banana block scoped hai 
+// curly braces {} ke ander variable let banana block scoped hai 
 //  block scope ke ander hum var nahi balke let lagate hai 
 
 

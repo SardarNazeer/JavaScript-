@@ -77,3 +77,49 @@ for (let i = 0; i <= 100; i++) {
     }
     
 }
+
+
+// Q10) Stop at first Multiple of 7
+
+// Write a loop from 1 to 100 that:
+// Print each number 
+// Stop Completely when it find the first number divisible by 7
+
+
+for(let i = 1; i <= 100; i++){
+    console.log(i);
+    if (i % 7 === 0) {
+        break;
+    }
+}
+
+
+// Q11) Skip multiplies of 3
+// Write a loop from 1 to 20 that:
+// skip numbers divisble by 3
+// print all other
+
+
+for (let i = 0; i <= 20; i++) {
+    console.log(i);
+    if (i % 3 === 0) {
+        continue;
+    }
+    console.log(i);
+}
+
+// Q12) Print First 5 odd number only 
+// Write a loop from 1 to 100 that:
+// print only 5 odd number
+// then stop the loop
+
+let counter = 0;
+for(let i = 1; i <= 100; i++){
+    if (i%2 !== 0) {
+        counter++;
+        console.log(i);
+    }
+    if (counter === 5) {
+        break;
+    }
+}

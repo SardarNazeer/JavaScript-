@@ -161,3 +161,84 @@ function multiply(factor) {
 
 let double = multiply(3);
 console.log(double(3));
+
+// Pure Vs Impure Function
+
+// pure > aisa function jo function ke bahir ki value ko na badle
+
+
+let a = 3;
+
+function pure() {
+    console.log("Hello")
+}
+
+// impure > aisa function jo function ke bahir ki value badal dy
+
+function impure() {
+    a++;
+}
+
+
+// Closure and lexical scoping
+
+// Closures > ek function jo return kare ek or function 
+// or return hune wala function hamesha use karega parent function ka koi variable
+
+function cloFnc() {
+    let a = 13;
+    return function(){
+        console.log(a);
+    }
+}
+
+// lexical scoping > var ki physical position
+
+function lexSco(){
+    let a = 3;
+    function abcd(){
+        let b = 4;
+        function efg(){
+            let c = 14;
+        }
+    }
+}
+
+
+// IIFE (IMMEDIETLY INVOKED FUNCTION EXPRESSION)
+
+// Normally function ko pehle define karte hain, phir call karte hain
+
+function sayHello() {
+  console.log("Hello");
+}
+sayHello();
+
+// Lekin IIFE me function banate hi turant execute ho jata hai.
+
+(function(){
+    
+})();
+
+// (function(){}) → function expression
+// () → turant call
+
+// Hoisting diffrences b/w declartion and expression
+// hoisting > kisi func ya var banane se pehla declare kar dena
+
+abcdee();
+
+function abcdee() {
+    console.log("hello")
+}
+
+// ye run karega qk ye function statemnet hai 
+
+abcds();
+
+let abcds = function(){
+    console.log("hey");
+}
+
+// ye run nahi karega qk hoisting function expression me kam nahi karta
+

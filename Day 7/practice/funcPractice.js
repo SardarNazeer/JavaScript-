@@ -111,3 +111,135 @@ function init() {
 (function() {
     console.log("initialized");
 })();
+
+// Q12) Create a function that prints hello world 
+
+function helloWorld(){
+    console.log("Hello World");
+}
+
+helloWorld();
+
+// Q13) Write a function that takes a name as a parameter and prints it.
+
+function myFunc(name){
+    console.log(name);
+}
+
+myFunc("Sardar Nazeer");
+
+// Q14) Create a function to add two numbers.
+
+function sum(num1,num2){
+    return num1 + num2;
+}
+
+console.log(sum(22,32));
+
+// Q15) Write a function that returns the square of a number.
+
+function Square(sqr){
+    return sqr*sqr;
+}
+
+console.log(Square(11));
+
+// Q16) Create a function to check if a number is even or odd.
+
+function evenOdd(num){
+    if(num%2===0) return "Even";
+    return "Odd";
+}
+
+console.log(evenOdd(11));
+
+
+// Q17) Write a function to check if a number is positive, negative, or zero
+
+function checkNum(num){
+    if (num>0) {
+        console.log(`${num} is positive`);
+    } else if (num<0) {
+        console.log(`${num} is negative`);
+    } else if (num === 0) {
+        console.log(`${num} is zero`);
+    }
+}
+
+checkNum(-22);
+
+// Q18) Create a function to print numbers from 1 to 10.
+
+
+function printNum() {
+    for (let i = 1; i <= 10; i++) {
+        console.log(i);
+        
+    }
+};
+
+printNum();
+
+
+// Q19) Write a function that returns the cube of a number.
+
+function cube(num){
+    return num*num*num;
+}
+
+console.log(cube(3));
+
+// Q20) Create a function that returns the larger of two numbers.
+
+function largerNum(a,b){
+    if(a>b) return `${a} is greater than ${b}`;
+    return `${b} is greater than ${a}`;
+}
+
+console.log(largerNum(34,89));
+
+// Q21) Write a function to calculate simple interest.
+
+function calculateSI(P,R,T){
+    let SI = (P*R*T)/100;
+    return SI;
+}
+
+let simpleIntrest = calculateSI(1200,5,2);
+
+console.log(`Simple Intrest Is ${simpleIntrest}`);
+
+// Q22) Create a function to calculate the factorial of a number.
+
+function factorial(n){
+    let result = 1;
+    for(let i = 1; i <= n; i++){
+        result = result * i;
+    };
+    return result;
+}
+
+console.log(factorial(6));
+
+// Q23) Write a function to print the multiplication table of a number.
+
+function multiplication(n){
+    for(let i = 1; i<=10; i++){
+        result = n * i;
+        console.log(`${n} x ${i} = ${result}`);
+    }
+}
+
+multiplication(6);
+
+// Q24) Create a function to manually count the length of a string (using a loop).
+
+function stringLen(str){
+    count = 0;
+    for(let i = 0; str[i]; i++){
+        count++;
+    }
+    return count;
+}
+
+console.log(stringLen("hello"))

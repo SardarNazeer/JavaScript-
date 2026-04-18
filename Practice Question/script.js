@@ -142,3 +142,31 @@ salary = Number(salary);
 
 (salary >= 50000) ? console.log("High Sallery") : (salary>= 20000 && salary<50000) ?
  console.log("Medium salary") : (salary<20000) ? console.log("low") : console.log("error");
+
+
+//  12) Write a BMI Calculator 
+
+// BMI ek measurement hai jo batata hai ke:
+// tumhara weight tumhari height ke hisaab se normal hai ya nahi
+
+// Yani:
+
+// Tum underweight ho?
+// Normal ho?
+// Ya overweight  ho?
+
+function CalculateBmi(weight, height) {
+    let bmi = weight / (height * height);
+
+    if (bmi < 18.5) {
+        return "Underweight";
+    } else if (bmi >= 18.5 && bmi < 25) {
+        return "Normal";
+    } else if (bmi >= 25 && bmi < 30) {
+        return "Overweight";
+    } else {
+        return "Obese";
+    }
+}
+
+console.log(CalculateBmi(65, 1.70));

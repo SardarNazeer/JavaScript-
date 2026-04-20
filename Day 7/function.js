@@ -242,3 +242,15 @@ let abcds = function(){
 
 // ye run nahi karega qk hoisting function expression me kam nahi karta
 
+// Normal function vs Fat arrow function
+
+// fat arrow function objects ke ander use nahi kar skty 
+// baqi jaha chahe use kar sakty hai
+
+// Function hoisting and TDZ (TEMPORAL DEAD ZONE)
+
+great(); // work
+function great(){};
+
+great(); // error
+let great = () => {};

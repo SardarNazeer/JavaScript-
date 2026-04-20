@@ -243,3 +243,62 @@ function stringLen(str){
 }
 
 console.log(stringLen("hello"))
+
+// Q25) Create a reusable discount calculator (HOF)
+
+function discountCalculator(discount) {
+    return function(price){
+        return price - price * (discount/100)
+    }
+}
+
+let discounter = discountCalculator(20);
+console.log(discounter(900));
+
+
+// Q26) Build a counter using closure 
+
+function counter() {
+    let count = 0;
+    return function(){
+        count++;
+        return count;
+    }
+}
+
+
+
+let c = counter();
+
+console.log(c());
+console.log(c());
+console.log(c());
+console.log(c());
+console.log(c());
+
+let d = counter();
+
+console.log(d());
+console.log(d());
+console.log(d());
+
+console.log(c());
+
+// Q27) Create a pure function to transform a value 
+
+function transformVal(val){
+    return val * 2;
+}
+
+console.log(transformVal(30));
+
+
+// Q28) Use IIFE to isolate variables 
+
+// iife > is function ke ander jo variable huty wo function ke bahir access nahi kar skty
+
+(function(){
+    let password = "my_password";
+    console.log(password)
+})();
+

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: blanchedalmond;
+            height: 100vh;
+            width: 100vh;
+        }
+
+        #main{
+            margin-top: 20px;
+        }
+
+        form{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin: 20px;
+        }
+        form input{
+            width: 120px;
+            padding: 10px;
+            border-radius: 4px;
+            border: none;
+        }
+        form input:focus{
+            outline: none;
+        }
+
+        .card{
+            margin-top: 40px;
+            border-radius: 10px;
+            display: inline-block;
+            border: 2px solid black;
+            padding: 20px;
+            max-width: 300px;
+        }
+
+        .profile{
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            overflow: hidden;
+            margin-bottom: 7px;
+        }
+
+        .profile img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card h1{
+            font-size: 12px;
+        }
+
+        .card h3{
+            font-size: 10px;
+        }
+
+        .card p{
+            font-size: 9px;
+            margin-top: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="main">
+        <form action="">
+            <input type="text" placeholder="Upload profile">
+            <input type="text" placeholder="Enter name">
+            <input type="text" placeholder="Occupation">
+            <input type="text" placeholder="Info">
+            <input type="submit">
+        </form>
+
+    </div>
+
+
+    <script src="task3.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .main{
+        background-color:bisque;
+        color: white;
+        height: 40px;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-around;
+        padding-top: 10px;
+    }
+    .main .nav a{
+        text-decoration: none;
+        color: black;
+    }
+    .nav button{
+        background-color: brown;
+        color: #fff;
+        border-radius: 5px;
+        padding: 4px;
+        border: none;
+    }
+
+    .li{
+        text-decoration: line-through;
+    }
+</style>
+
+<body>
+    
+    <!-- <button>Click me</button> -->
+
+    <div class="main">
+        <div class="nav">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <button>Click & Follow</button>
+        </div>
+    </div>
+
+    <ul>
+        <li>Apple</li>
+        <li>Mango</li>
+        <li>Banana</li>
+        <li>Watermelon</li>
+        <li>guava</li>
+    </ul>
+
+    <script src="eventObject.js"></script>
+</body>
+</html>

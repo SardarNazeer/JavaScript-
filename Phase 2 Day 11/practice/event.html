@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addeventlistener</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: bisque;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #main {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 150px;
+        }
+
+        #task2 {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* input{
+            display: none;
+        } */
+
+        .btn {
+            background-color: rgb(4, 73, 4);
+            padding: 12px 22px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 5px;
+            color: #fff;
+        }
+
+        .btn:hover {
+            background-color: rgb(9, 160, 9);
+        }
+
+        #formSub {
+            /* height: 100vh; */
+            display: block;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 150px;
+            margin: 20px;
+        }
+
+        form input {
+            padding: 10px;
+            border-radius: 6px;
+            border: none;
+        }
+
+        form input:focus {
+            outline: none;
+        }
+
+        .card{
+            margin-top: 20px;
+            border: 2px solid red;
+            width: 300px;
+            margin-left: 40px;
+            padding: 12px 22px;
+        }
+        .card .profile{
+            border-radius: 50%;
+            width: 50px;
+
+        }
+
+        .card .profile img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+
+        .card h1{
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <div id="main">
+        <h1>1</h1>
+    </div> -->
+
+    <!-- <div id="task2">
+        <input type="file" class="input">
+        <div class="btn">
+            Upload Now
+        </div>
+    </div> -->
+
+    <div id="formSub">
+        <form action="">
+            <input type="text" placeholder="enter your name">
+            <input type="text" placeholder="enter your age">
+            <input type="email" placeholder="enter email">
+            <input type="text" placeholder="upload picture">
+            <input type="submit">
+        </form>
+
+        <div class="card">
+            <div class="profile">
+                <img src="https://plus.unsplash.com/premium_photo-1683910767532-3a25b821f7ae?q=80&w=808&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="">
+            </div>
+            <h1>Sardar Nazeer</h1>
+            <h3>23</h3>
+            <p>sardarnazeer1108@gmail.com</p>
+        </div>
+
+    </div>
+
+    <script src="event.js"></script>
+</body>
+
+</html>

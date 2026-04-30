@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            background-color: rgb(141, 115, 81);
+            border: 1px solid black;
+            width: 300px;
+            padding: 12px;
+            border-radius: 5px;
+        }
+
+        form input {
+            padding: 10px 12px;
+            margin: 5px 20px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        form input:focus{
+            outline: none;
+        }
+
+        form select {
+            padding: 10px 12px;
+            margin: 5px 20px;
+            border-radius: 5px;
+        }
+
+        form textarea {
+            padding: 10px 12px;
+            margin: 5px 20px;
+            border-radius: 5px;
+        }
+
+           form textarea:focus{
+            outline: none;
+        }
+
+        .submit{
+            background-color: rgb(12, 7, 7);
+            color: #fff;
+            font-size: 14px;
+            padding: 12px;
+            margin-left: 60px;
+            border-radius: 5px;
+        }
+
+        small {
+            font-size: 12px;
+            color: red;
+            font-weight: 600;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form>
+        <input id="name" type="text" placeholder="name">
+        <br>
+        <div class="hide">
+            <br>
+            <small>Your name should not be less than 2</small>
+        </div>
+        <br>
+        <input type="email" placeholder="email"> <br><br>
+        <input type="password" placeholder="password"> <br><br>
+        <select>
+            <option value="Chosse">Chose Your Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+        <br><br>
+        <textarea>tell us about yourself</textarea>
+        <br><br>
+        <input type="submit" class="submit">
+    </form>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

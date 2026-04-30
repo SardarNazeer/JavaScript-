@@ -37,6 +37,30 @@
     .li{
         text-decoration: line-through;
     }
+
+    .a{
+        width: 80%;
+        height: 60vh;
+        background-color: aqua;
+    }
+        .b{
+        width: 80%;
+        height: 50vh;
+        background-color: brown;
+    }
+        .c{
+        width: 80%;
+        height: 40vh;
+        background-color:blue;
+    }
+    .a .b .c button{
+        background-color: bisque;
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        font-size: 14px;
+        margin: 40px;
+    }
 </style>
 
 <body>
@@ -58,6 +82,14 @@
         <li>Watermelon</li>
         <li>guava</li>
     </ul>
+
+    <div class="a">
+        <div class="b">
+            <div class="c">
+                <button>Click me</button>
+            </div>
+        </div>
+    </div>
 
     <script src="eventObject.js"></script>
 </body>

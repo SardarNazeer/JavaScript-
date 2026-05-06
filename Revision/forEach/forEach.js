@@ -1,7 +1,6 @@
 // Foreach > ye ek array method hai jo loop ki har value pe chalta hai
 // matlab ye array ke har item ko ek ek karke access karne ke lie huta hai 
 
-const { split } = require("postcss/lib/list");
 
 // Ye new array return nahi karta
 
@@ -206,7 +205,7 @@ let stringArr = ["Ali","Sardar","Hassan"];
 let reverse = []
 
 stringArr.forEach(function(value){
-    let result = value.split().reverse().join();
+    let result = value.split("").reverse().join("");
     reverse.push(result);
 })
 
@@ -214,38 +213,231 @@ console.log(reverse);
 
 // 17) Take an array of names and print them with numbering (e.g., 1. Ali, 2. Ahmed).
 
+let nameArray = ["Ali","Sardar","Hassan"];
+
+
+
+nameArray.forEach(function(value, index){
+
+    console.log(index+1 + "-" + value)
+
+})
+
+
 // Basic Strengthening
 
 // Take an array of numbers and print each number using forEach().
+
+let numberArr = [0,1,2,4,5];
+
+numberArr.forEach(function(val){
+    console.log(val);
+})
+
 // Take an array of names and print each name in uppercase.
+
+let tnameUpper = ["Ali","Sardar","Hassan"];
+
+tnameUpper.forEach(function(value){
+    console.log(value.toUpperCase());
+})
+
 // Take an array and print each element with its index.
+
+let std = ["usman","anus","daniya"];
+
+std.forEach(function(val,ind){
+    console.log(ind + "-" + val);
+})
+
 // Take an array of numbers and print numbers multiplied by 2.
+
+let mulNum = [1,4,7,8,9,0,12];
+
+mulNum.forEach(function(val){
+    console.log(val * 2);
+})
+
 // Take an array and print only numbers greater than 10.
+
+let grNum = [1,5,8,9,11,15,21,13];
+
+grNum.forEach(function(ele){
+    if(ele > 10){
+        console.log(ele);
+    }
+})
 
 // ⚡ Intermediate Logic
 
-// Take an array of numbers and calculate their total sum using forEach().
 // Take an array of numbers and count how many are even.
+
+let evenNum = [1,6,8,12,10,2,3,5,6,7];
+let evenSum = 0;
+
+evenNum.forEach(function(element){
+
+    if(element % 2 === 0){
+        evenSum++;
+    }
+    
+})
+
+// console.log(evenSum)
+
+
 // Take an array of strings and print only words with length > 4.
+
+let series = ["GOT","TB","From","Stranger","Peaky"];
+
+series.forEach(function(val){
+    if (val.length > 4) {
+        console.log(val);
+    }
+})
+
+
 // Take an array of prices and add 15% tax to each price.
+
+let priceArr = [1200,2345,5900,123400];
+
+priceArr.forEach(function(value){
+    let tax = value * (15/100);
+    console.log(value + tax);
+})
+
 // Take an array of numbers and find how many are negative.
+
+let negNum = [-12,0,1,-2,56,-17];
+let negCount = 0;
+
+negNum.forEach(function(value){
+    if (value < 0) {
+        negCount++;
+    };
+})
+
+console.log(negCount);
+
 
 // 🔥 Object + Real World
 
-// Take an array of users (name, age) and print only names of users above 18.
-// Take an array of products (name, price) and print products under 1000.
 // Take an array of students and print their names with marks.
+
+let studentsArr = [
+    {
+        name: "Daniya",
+        marks: 90,
+    },
+    {
+        name: "Wadiya Batool",
+        marks: 40,
+    },{
+        name: "Usman",
+        marks: 78,
+    },{
+        name: "Haroon",
+        marks: 87,
+    },
+]
+
+studentsArr.forEach(function(value){
+    console.log(value.name + "-" + value.marks);
+})
+
 // Take an array of employees and print only those with salary > 50000.
+
+let employees = [
+    {
+        name: "Sardar",
+        salary: 80000,
+    },
+        {
+        name: "Uzair",
+        salary: 51000,
+    },    {
+        name: "Ali Sher",
+        salary: 12000,
+    },    {
+        name: "Basit",
+        salary: 40000,
+    },    {
+        name: "Muzammil",
+        salary: 49000,
+    },
+]
+
+employees.forEach(function(val){
+    if(val.salary > 50000){
+        console.log(val.name);
+    }
+})
+
 // Take an array of objects and count how many users are active (active: true).
+
+let userStatus = [
+    {
+        name: "Sardar",
+        active: true,
+    },
+        {
+        name: "Uzair",
+        active: false,
+    },    {
+        name: "Ali Sher",
+        active: true,
+    },    {
+        name: "Basit",
+        active: false,
+    },    {
+        name: "Muzammil",
+        active: true,
+    },
+]
+
+userStatus.forEach(function(user){
+    if (user.active === true) {
+        console.log(user.name);
+    }
+})
 
 // 🌐 DOM Practice (Very Important)
 
 // Select all <li> elements and change their text color using forEach().
-// Select all buttons and attach a click event to each using forEach().
-// Select all input fields and check if any is empty; highlight it.
+
+let lis = document.querySelectorAll("li");
+
+lis.forEach(function(e){
+    e.style.color = "green";
+})
+
+
 // Create <div> elements from an array and append them to the page.
+
+let randomArr = ["JavaScript","CSS","C#","C++","JAVA"];
+
+randomArr.forEach(function(val){
+    let div = document.createElement("div");
+
+    div.textContent = val;
+
+    document.body.appendChild(div);
+    
+})
+
+
 // Take an array of names and display them inside a <ul> using forEach().
 
-// 🧠 Bonus Challenge (Interview Level)
 
-// Use forEach() to build a search filter system (array of names filter by input text)
+let randomName = ["GOT","TB","From","Stranger","Peaky"];
+
+randomName.forEach(function(e){
+    let Newul = document.createElement("ul");
+    let li = document.createElement("li");
+    li.textContent = e;
+
+    Newul.appendChild(li);
+
+    document.body.appendChild(Newul);
+})
+

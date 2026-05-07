@@ -1,72 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes App (save text to localStorage)</title>
+    <title>Notes App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    
+    <div class="container">
+        <header class="header">
+            <h1>Notes App</h1>
+            <p>Sava your thoughts and ideas in style</p>
+        </header>
 
-    <!DOCTYPE html>
-    <html lang="en">
+        <div class="controls">
+            <div class="controls-container">
+                <input type="text" id="searchInput" placeholder="search notes..">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Notes Call App</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+                <div class="filter-groups">
+                    <select id="filterSelect">
+                        <option value="all">All Notes</option>
+                        <option value="work">Work</option>
+                        <option value="personal">Personal</option>
+                        <option value="ideas">Ideas</option>
+                        <option value="remainder">Remainder</option>
+                    </select>
 
-    <body>
-
-        <div class="form-container">
-            <h2>New call</h2>
-            <form>
-                <label>Image URL</label>
-                <input type="text" placeholder="https://example.com/photo.jpg">
-
-                <label>Full Name</label>
-                <input type="text" placeholder="Type your name">
-
-                <label>Home Town</label>
-                <input type="text" placeholder="Enter home town">
-
-                <label>Purpose</label>
-                <input type="text" placeholder="e.g., Quick Appointment Note">
-
-                <label>Category</label>
-                <label class="tag-checkbox">
-                    <input required value="emergency" name="category" type="radio">
-                </label>
-
-
-                <label class="tag-checkbox">
-                    <input required value="important" name="category" type="radio">
-                </label>
-
-                                <label class="tag-checkbox">
-                    <input required value="important" name="category" type="radio">
-                </label>
-
-                                <label class="tag-checkbox">
-                    <input required value="important" name="category" type="radio">
-                </label>
-
-            </form>
-            <button class="closeForm">close</button>
+                    <button id="addNoteBtn"><i class="fas fa-plus"></i>Add</button>
+                </div>
+            </div>
         </div>
 
-        <div class="note-container">
-
+        <div id="notesContainer">
+            <!-- notes yaha js se dynamically add kiye jayenge -->
         </div>
 
-    </body>
+        <div id="emptyState">
+            <i class="fas fa-notes-medical"></i>
+            <h3>No Notes</h3>
+            <p>Add your first notes by clicking "Add" button</p>
+        </div>
 
-    </html>
+
+        <div id="addNoteModel">
+            <div class="modal">
+                <div class="modal-header">
+                    <h3 class="modal-title">New Note</h3>
+                    <button id="closeModalBtn"><i class="fas fa-times"></i></button>
+                </div>
+
+                <form action="" id="noteForm">
+                    <div class="form-group">
+                        <label for="noteTitle" class="form-label">Title</label>
+                        <input type="text" required id="noteTitle">
+                    </div>
+                    <div class="form-group">
+                        <label for="noteContent" class="form-label">Content</label>
+                        <textarea id="noteContent" class="form-input form-textarea"
+                        required></textarea>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
 
     <script src="script.js"></script>
 </body>
-
 </html>

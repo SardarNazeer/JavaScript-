@@ -138,16 +138,126 @@ obj6.sayName(); // output: object
 // 10. Store an object method in a variable and call it separately.
 //  Observe what happens to this.
 
+let obj7 = {
+    name: "Sardar",
+    greet: function(){
+        console.log(this.name);
+    },
+};
 
+obj7.greet(); // output: Sardar
+let varObj = obj7.greet;
+varObj(); // output: undefined or window
+
+// yaha obj7 function ko call kar raha hai
+// obj7.greet(); 
+// this === obj7
+
+// lekin ye varObj() > simple function call
+// this !== obj7
 
 
 // 11. Create a button click event and print this inside the event handler.
-// 12. Create a method inside an object that uses setTimeout(). Check what this refers to inside timeout.
+
+let btn = document.querySelector("button");
+
+btn.addEventListener("click", function(){
+    console.log(this);
+})
+
+
+// 12. Create a method inside an object that uses setTimeout().
+// Check what this refers to inside timeout.
+
+let obj8 = {
+    name: "Sardar",
+    greet: function(){
+        setTimeout(() => {
+        console.log(this.name)
+        }, 3000);
+    }
+}
+
+obj8.greet(); // output: sardar
+
 // 13. Solve the previous question using arrow function and bind().
-// 14. Create a person object with a greet method and call the method in different ways to observe this.
+
+let obj9 = {
+    name: "Nazeer",
+
+    greet: function () {
+
+        // Using bind()
+        setTimeout(function () {
+            console.log(this.name);
+        }.bind(this), 3000);
+
+    }
+};
+
+obj9.greet();
+
+
+// 14. Create a person object with a greet method and call the method
+// in different ways to observe this.
+
+const person = {
+    name: "Sardar Nazeer",
+    age: 23,
+    role: "Full Stack Web Development",
+    welcome: function(){
+        console.log(this.name + " " + this.age + " " + this.role);
+    },
+};
+
+person.welcome(); // Sardar Nazeer 23 Full Stack Web Development
+
+let p = person.welcome;
+p(); // undefined
+
+const person1 = {
+    name: "Sardar Nazeer",
+    age: 23,
+    role: "Full Stack Web Development",
+};
+
+function greetBind(){
+    console.log(this);
+};
+
+greetBind.bind(person1);
+
+
 // 15. Use call() to change the value of this.
+
+let person3 = {
+    name: "ali",
+};
+
+function callPerson(){
+    console.log(this.name);
+};
+
+callPerson.call(person3); // ali
+
+
 // 16. Use apply() to borrow a method from another object.
+
+let person4 = {
+    name: "Hassan",
+};
+
+function applyPerson(a,b){
+    console.log(this.name, a,b)
+};
+
+applyPerson.apply(person4, [3,4])
+
 // 17. Use bind() to permanently bind this to an object.
+
+
+
+
 // 18. Create a function and manually set this using call, apply, and bind.
 // 19. Create a constructor function and use this to assign values.
 // 20. Create multiple objects using the constructor function.

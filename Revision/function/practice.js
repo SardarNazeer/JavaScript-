@@ -226,63 +226,73 @@ function vowelCount(text) {
 
 console.log(vowelCount("Sardar Nazeer"));
 
-
 // Write a function to find the sum of digits of a number.
 
-function digitCount(number){
-    let sum = 0;
+function digitCount(number) {
+  let sum = 0;
 
-    while (number > 0) {
-        let digit = number % 10;
+  while (number > 0) {
+    let digit = number % 10;
 
-        sum = sum + digit;
+    sum = sum + digit;
 
-        number = Math.floor(number/10);
-    };
-    return sum;
+    number = Math.floor(number / 10);
+  }
+  return sum;
 }
 
 console.log(digitCount(1234));
 console.log(digitCount(9989));
 console.log(digitCount(2345));
 
-
 // Create a function to find the largest of three numbers.
 
-function threeLarNum(num1,num2,num3){
-    if (num1>num2 && num1>num3) {
-        console.log(`num1 ${num1} is greatest number`);
-    } else if(num2>num1&&num2>num3){
-        console.log(`num2 ${num2} is greatest number`);
-    } else{
-        console.log(`num3 ${num3} is greatest number`);
-    }
+function threeLarNum(num1, num2, num3) {
+  if (num1 > num2 && num1 > num3) {
+    console.log(`num1 ${num1} is greatest number`);
+  } else if (num2 > num1 && num2 > num3) {
+    console.log(`num2 ${num2} is greatest number`);
+  } else {
+    console.log(`num3 ${num3} is greatest number`);
+  }
 }
 
-threeLarNum(34,342,65)
+threeLarNum(34, 342, 65);
 
 // Write a function to print Fibonacci series using a loop.
 
-function fibonacci(n){
-    let first = 0;
-    let second = 1;
+function fibonacci(n) {
+  let first = 0;
+  let second = 1;
 
-    for(let i = 1; i <= n; i++){
-        
-        console.log(first);
-        let next = first + second;
+  for (let i = 1; i <= n; i++) {
+    console.log(first);
+    let next = first + second;
 
-        first = second;
-        second = next;
-    };
-};
+    first = second;
+    second = next;
+  }
+}
 
 fibonacci(10);
 
 // Advanced Level (21–30)
 
 // Create a function that takes another function as a parameter (callback).
+
 // Write a function that returns another function (closure).
+
+function outer() {
+  let name = "Sardar Nazeer";
+
+  function inner() {
+    console.log(name);
+  }
+  return inner();
+}
+
+let resClosure = outer();
+
 // Create a recursive function to calculate factorial.
 // Write a recursive function to generate Fibonacci numbers.
 // Create a function using currying (e.g., add(2)(3)).
@@ -296,43 +306,200 @@ fibonacci(10);
 
 // LEVEL 1 — Beginner Functions (1–20)
 
-// 1.	Create a function that prints Hello World.
-// 2.	Create a function that prints your name.
-// 3.	Create a function that adds two numbers.
-// 4.	Create a function that subtracts two numbers.
-// 5.	Create a function that multiplies two numbers.
-// 6.	Create a function that divides two numbers.
-// 7.	Create a function that returns remainder.
-// 8.	Create a function that checks whether a number is even or odd.
-// 9.	Create a function that checks whether a number is positive or negative.
-// 10.	Create a function that returns square of a number.
-// 11.	Create a function that returns cube of a number.
-// 12.	Create a function that converts minutes into seconds.
+// Create a function that converts minutes into seconds.
+
+function convertMinInSec(min) {
+  let sec = min * 60;
+  return sec;
+}
+
+console.log(convertMinInSec(10));
+
 // 13.	Create a function that converts hours into minutes.
+
+function convertHrInMin(hours) {
+  let min = hours * 60;
+  return min;
+}
+
+console.log(convertHrInMin(4));
+
 // 14.	Create a function that converts Celsius into Fahrenheit.
+
+function convertCelInFah(cel) {
+  let Fahrenheit = (cel * 9) / 5 + 32;
+
+  return Fahrenheit;
+}
+
+console.log(convertCelInFah(30));
+
 // 15.	Create a function that calculates area of rectangle.
+
+function calAreaOfRec(l, w) {
+  let area = l * w;
+
+  return area;
+}
+
+console.log(calAreaOfRec(23, 45));
+
 // 16.	Create a function that calculates perimeter of rectangle.
+
+function calPerOfRec(l, w) {
+  let p = 2 * (l + w);
+
+  return p;
+}
+
+console.log(calPerOfRec(3, 5));
+
 // 17.	Create a function that checks whether a user can vote or not.
+
+function userEligibility(age) {
+  if (age >= 18) {
+    console.log("Eligible");
+  } else {
+    console.log(" Not Eligible");
+  }
+}
+
+userEligibility(18);
+
 // 18.	Create a function that returns full name using first name and last name.
+
+function fullName(firstName, lastName) {
+  let fulName = firstName + lastName;
+  return fulName;
+}
+
+console.log(fullName("Sardar", "Nazeer"));
+
 // 19.	Create a function that checks whether a letter is vowel or consonant.
-// 20.	Create a function that returns largest number between two numbers.
+
+function letterCheck(c) {
+  c = c.toLowerCase();
+
+  if (c === "a" || c === "e" || c === "i" || c === "o" || c === "u") {
+    console.log("letter is vowel");
+  } else {
+    console.log("letter is consonant");
+  }
+}
+
+letterCheck("e");
 
 // LEVEL 2 — Intermediate Logic (21–40)
 
-// 21.	Create a function that returns largest number among three numbers.
 // 22.	Create a function that checks pass or fail.
+
+function checkPassOrFail(marks) {
+  if (marks >= 33) {
+    console.log("You are passed");
+  } else {
+    console.log("You are failed");
+  }
+}
+
+checkPassOrFail(59);
+checkPassOrFail(32);
+
 // 23.	Create a function that returns grade according to marks.
-// 24.	Create a function that calculates percentage of three subjects.
+
+function grade(math, eng, urdu) {
+  let totalMarks = 300;
+  let obtainedMarks = math + eng + urdu;
+  let percantage = (obtainedMarks / totalMarks) * 100;
+  percantage = Math.floor(percantage);
+  console.log(percantage);
+
+  if (percantage >= 90 && percantage <= 100) {
+    console.log("A1 Grade");
+  } else if (percantage >= 80 && percantage <= 90) {
+    console.log("A Grade");
+  } else if (percantage >= 70 && percantage <= 80) {
+    console.log("B Grade");
+  } else if (percantage >= 60 && percantage <= 70) {
+    console.log("C Grade");
+  } else if (percantage >= 50 && percantage <= 60) {
+    console.log("D Grade");
+  } else {
+    console.log("fail");
+  }
+}
+
+grade(80, 78, 12);
+
+
 // 25.	Create a function that checks whether a number is divisible by 5.
+
+function checkNumDiv(num){
+  if (num % 5 === 0) {
+    console.log("Number is divisible by 5")
+  } else {
+    console.log("Number is not divisible by 5")
+
+  }
+}
+
+checkNumDiv(20);
+
 // 26.	Create a function that checks whether a number is divisible by both 3 and 5.
-// 27.	Create a function that returns factorial of a number.
-// 28.	Create a function that prints table of a number.
-// 29.	Create a function that counts total digits in a number.
-// 30.	Create a function that reverses a number.
-// 31.	Create a function that checks whether a number is palindrome or not.
+
+function checkNumber(num){
+  if (num % 3 === 0 && num % 5 === 0) {
+    console.log("number is divisible by both")
+  } else{
+    console.log("not divisible");
+  };
+};
+
+checkNumber(15);
+
 // 32.	Create a function that returns sum of all numbers from 1 to n.
+
+function sumFunc(n){
+  let sum = 0;
+  for (let i = 0; i <= n; i++) {
+    sum = sum + i;
+  };
+  return sum;
+}
+
+console.log(sumFunc(12));
+
 // 33.	Create a function that finds largest number in an array.
+
+
+function larNumArr(array){
+  let largest = array[0];
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i]>largest) {
+      largest = array[i];
+    }
+    
+  };
+  return largest;
+};
+
+console.log(larNumArr([10,20,30,40,50]));
+
 // 34.	Create a function that finds smallest number in an array.
+
+function smallestNumArr(arr){
+  let smallest = arr[0];
+
+  for(let i = 0; i <arr.length; i++){
+    if (arr[i] < smallest) {
+      smallest = arr[i];
+    }
+  };
+  return smallest;
+}
+
+console.log(smallestNumArr([10,20,30,40,50]))
+
 // 35.	Create a function that returns sum of array elements.
 // 36.	Create a function that returns average of array elements.
 // 37.	Create a function that counts even numbers in an array.

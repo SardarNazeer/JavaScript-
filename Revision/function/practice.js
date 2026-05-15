@@ -595,15 +595,241 @@ console.log(duplicateArrVal([2,6,7,6,7,12,45]));
 // LEVEL 3 — Advanced Programmer Thinking (41–60)
 
 // 41.	Create a function that checks login credentials.
+
+function loginCredentials(status){
+  if (status === "yes") {
+    console.log("user login");
+  } else {
+    console.log("user login failed")
+  };
+};
+
+loginCredentials("yes");
+loginCredentials("no");
+
+
 // 42.	Create a function that validates password.
+
+function validatePassword(id,password){
+  if (id === "sardar" && password === 12345) {
+    console.log(`${id} login`);
+  } else {
+    console.log(`${id} login failed`);
+  }
+}
+
+
+validatePassword("sardar",12345);
+validatePassword("sardar",123);
+
+
 // 43.	Create a function that validates email.
+
+function validateEmail(email){
+  if (email.includes("@") && email.includes(".com")) {
+    console.log("email is correct");
+  } else {
+    console.log("email is not correct");
+  }
+}
+
+validateEmail("sardarnazeer@gmail.com");
+validateEmail("sardarnazeer.com");
+
+
+
 // 44.	Create a function that calculates discount price.
+
+function calDiscount(price){
+  let discount = 0;
+  if (price > 5000 && price < 10000) {
+     discount = (10/100) * price;
+     return `${discount} on this ${price} 10 percent discount`;
+  } else if (price > 3000 && price < 5000) {
+     discount = (10/100) * price;
+     return `${discount} on this ${price} 5 percent discount`;
+  } else{
+    return console.log(`${price} no discount on this price`);
+  };
+};
+
+console.log(calDiscount(6600));
+console.log(calDiscount(3320));
+calDiscount(100);
+
+
 // 45.	Create a function that calculates tax on product price.
+
+function calTax(tax){
+  let shoes = 5000;
+  let jewellery = 7000;
+  let shirt = 3000;
+
+  let proTax = 0;
+
+  if (tax >= 10) {
+   proTax = (tax/100) * shoes;
+    
+  } else if (tax === 5) {
+  proTax = (tax/100) * jewellery;
+    
+  } else if (tax === 2) {
+  proTax = (tax/100) * shirt;
+  } else {
+    console.log(`${tax} not defined`);
+  }
+  return proTax;
+}
+
+console.log(calTax(5));
+console.log(calTax(10));
+console.log(calTax(2));
+calTax(1);
+
+// reusable function 
+
+// ye function tax calculate karne ke lie 
+
+function calculateTax(price,tax){
+  return (price * tax) / 100;
+};
+// ye product pe tax cal karne ke lie 
+
+function taxOnProduct(price, product){
+  let productRule = {
+    shoes: 10,
+    jewellery: 5,
+    shirt: 2,
+  };
+
+  if (!productRule[product]) {
+    return `${product} not found`;
+  };
+
+  let tax = calculateTax(price, productRule[product]);
+  let finalPrice = price + tax;
+
+return {
+  price: price,
+  taxRate: productRule[product],
+  taxAmount: tax,
+  finalPrice: finalPrice
+};
+
+}
+
+console.log(taxOnProduct(5900, "shoes"));
+console.log(taxOnProduct(6790, "shirt"));
+console.log(taxOnProduct(4400, "jewellery"));
+console.log(taxOnProduct(5900, "pencil"));
+
+
+
 // 46.	Create a function that checks ATM withdrawal.
+
+function ATMwithdrawal(amount){
+  let balance = 6000;
+
+  if (amount <= balance) {
+    balance -= amount;
+    return `${amount} is withdraw successfully`;
+  } else {
+    return " insuficcient balance";
+
+  }
+};
+
+console.log(ATMwithdrawal(3800));
+console.log(ATMwithdrawal(6500));
+
+
 // 47.	Create a function that deposits money into account.
+
+  let balance = 8000;
+
+function depositMoney(deposit){
+
+  balance += deposit;
+
+  return {
+    message: `${deposit} money is deposit to your account`,
+    checkBalance: balance,
+  }
+};
+
+console.log(depositMoney(7000));
+console.log(depositMoney(5000));
+
+
 // 48.	Create a function that transfers money between accounts.
+
+let account1Bal = 90090;
+let account2Bal = 80090;
+
+function transferMoney(from, to ,money){
+  if (from === "sardar" && to === "ali") {
+    account1Bal -= money;
+    account2Bal += money;
+
+      return {
+    message: `${money} transfer from your account to ali`,
+    sardarBalance: account1Bal,
+    aliBalance: account2Bal,
+  }
+  } else if (from === "ali" && to === "sardar") {
+    account2Bal -= money;
+    account1Bal += money;
+      return {
+    message: `${money} transfer from your account to sardar`,
+    sardarBalance: account1Bal,
+    aliBalance: account2Bal,
+  }
+  } else {
+    return `${from} user not found`
+  }
+
+}
+
+console.log(transferMoney("sardar", "ali",78900));
+console.log(transferMoney("sardar", "ali",67890));
+
+console.log(transferMoney("ali","sardar",78900));
+console.log(transferMoney("ali","sardar",7890));
+
+console.log(transferMoney("ok","sardar",78900));
+
+
 // 49.	Create a function that generates random OTP.
+
+function OTPgenerate(){
+  // math.floor > decimal remove karta hai 
+  // math.random > 0.0000 to 0.9999 random number deta hai 
+  let otp = Math.floor(1000 + Math.random() * 8999);
+  return otp;
+}
+
+console.log(OTPgenerate());
+console.log(OTPgenerate());
+console.log(OTPgenerate());
+
+
 // 50.	Create a function that masks bank account number.
+
+// bank account number ko hide (mask) karna, sirf last digits show karna.
+
+function maskAccNum(AccountNumber){
+  // tostring > account no ko string me convert kar dega qk slice no pe kam nai krta 
+  let str = AccountNumber.toString();
+  // slice > humein akhir ke 4 number dega 
+  let lastDigits = str.slice(-4);
+  // str me jo acc no huga usme se 4 digit chor ke baki digit hide kar dega 
+  let mask = "*".repeat(str.length - 4) + lastDigits;
+
+  return mask;
+};
+
+console.log(maskAccNum(102026889012));
+
 // 51.	Create a function that converts first letter of every word into capital.
 // 52.	Create a function that counts vowels in a string.
 // 53.	Create a function that reverses a string.

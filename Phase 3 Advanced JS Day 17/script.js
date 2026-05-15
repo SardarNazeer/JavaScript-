@@ -153,3 +153,23 @@ let a1 = new Admin("Ali","Peshawar","a@.a1");
 
 
 // Prototypical inheritance vs classical inheritance 
+
+// classical inheritance > classes banana or unhe extend kar dena , 
+// class se class inherit krna
+
+// prototypical inheritance > object se object inherited karna, ye srf js me huta hai
+
+let coffe = {
+    color: "red",
+    drink: function(){
+        console.log("pee lo");
+    },
+};
+
+let coffe2 = Object.create(coffe);
+coffe2.taste = "bitter";
+console.log(coffe2);
+
+
+// ek object hai ap uski sare props/method ko inherit karwa dete ho dosre object me 
+

@@ -501,11 +501,96 @@ function smallestNumArr(arr){
 console.log(smallestNumArr([10,20,30,40,50]))
 
 // 35.	Create a function that returns sum of array elements.
+
+function sumOfArr(arr){
+  let sum = 0;
+
+  for(let i = 0; i < arr.length; i++){
+    sum = sum + arr[i];
+  }
+  return sum;
+}
+
+console.log(sumOfArr([12,3,4,5,6]));
+
 // 36.	Create a function that returns average of array elements.
+
+function averageArr(arr){
+  let sum = 0;
+
+  for(let i = 0; i < arr.length; i++){
+    sum = sum + arr[i];
+  };
+  return sum/arr.length;
+};
+
+console.log(averageArr([2,4,6,8,9]));
+
+
+
 // 37.	Create a function that counts even numbers in an array.
+
+function evenArr(arr){
+  let sum = 0;
+  for(let i = 0; i < arr.length; i++){
+    if (arr[i] % 2 === 0) {
+      sum++;
+    }
+  };
+  return sum;
+};
+
+console.log(evenArr([2,3,4,6,7,8,10]));
+
 // 38.	Create a function that counts odd numbers in an array.
+
+function oddArr(arr){
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 !== 0) {
+      sum++;
+    };
+  };
+  return sum;
+};
+
+console.log(oddArr([2,3,4,6,7,8,10]));
+
+
 // 39.	Create a function that searches a number inside array.
+
+function searchesArr(arr,num){
+  for(let i = 0; i < arr.length; i++){
+    if (arr[i] === num) {
+      return `${arr[i]} search found`;
+    }
+  };
+    return `not found`;
+
+}
+
+console.log(searchesArr([2,6,7,8,10,12,45],45));
+console.log(searchesArr([2,6,7,8,10,12,45],60));
+
+
+
+
+
 // 40.	Create a function that removes duplicate values from array.
+
+function duplicateArrVal(arr){
+
+  let unique = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (!unique.includes(arr[i])) {
+      unique.push(arr[i])
+    };
+    return unique;    
+  }
+}
+
+console.log(duplicateArrVal([2,6,7,6,7,12,45]));
+
 
 // LEVEL 3 — Advanced Programmer Thinking (41–60)
 

@@ -65,8 +65,72 @@ fetchProfile("Sardar Nazeer", function(data){
 
 // Promises: resolve, reject, then, catch 
 
+// promises > JavaScript me Promise ek object hota hai jo future me milne wale result 
+// ko represent karta hai.Ye asynchronous kaam handle karta hai, jaise:
+
+// API call
+// Database fetch
+// File loading
+// Timer
+
+// JavaScript me Asynchronous ka matlab hota hai:
+// Kaam background me chalta rahe aur baaki code rukay bina execute hota rahe.
+
+// jab bhi ap promise banate ho ya to wo resolve huga ya reject huga 
+
+let pr = new Promise(function(res,rej){
+    setTimeout(() => {
+        let rn = Math.floor(Math.random()*10);
+        if (rn>5) {
+            res(rn);
+        } else {rej(rn)};
+    }, 3000);
+})
+
+// pr.then(function(val){
+//     console.log("resolved with", val);
+// }).catch(function(val){
+//     console.log("reject with", val);
+// })
+
+// resolve huga to than chalega
+
+// res.than();
+
+// rejct huga to catch chalega 
+
+// rej.catch();
 
 // async/await syntax, error handling with try-catch 
 
+// async/await JavaScript me asynchronous code ko easy aur readable banata hai.
+// Ye promises ko handle karne ka modern tarika hai.
 
-// Chaining async operations 
+// async/await > .then .catch se bachata hai, agar kahi pe promise banaya hai 
+// to function bnau uske sath async likh do aur ander await
+
+// async/await kehta hai apne ander ke code ko try aur catch me rakho 
+// resolved hua to try ka code chalega
+// reject huga to catch ka code chalega
+
+async function abcd(){
+    try {
+        let val = await pr;
+        console.log(pr);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+abcd();
+
+// async Kya Hota Hai?
+
+// Jis function ke aage async lagta hai:
+// wo hamesha promise return karta hai
+// uske andar await use kar sakte hain
+
+// await Kya Hota Hai?
+
+// await promise ka result aane tak wait karta hai.
+// Lekin sirf async function ke andar use hota hai.

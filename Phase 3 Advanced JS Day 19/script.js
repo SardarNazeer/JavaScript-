@@ -29,12 +29,14 @@ fetch("http://randomuser.me/api/").then((rawdata)=>{
 
 // Fetch API: Get,Post,Basics 
 
+// get > url pe jau aur data lau 
+// post > url pe jau or data bhejo 
+
 // header, status code, JSON praising 
 
-
-
-// Form submission via fetch 
-
-// Error handling with response.ok and try catch 
-
-// Basic REST principles 
+// status code > 1. infromation responses ( 100 - 199)
+// 2. Successfull Response 200 - 299
+// jab data bhejte hai ya mile successfully tab 200-299 status code shuw huta hai 
+// 3. Redirection messages 300 - 399
+// 4.Client error response 400 - 499 
+// 5. Server Error reesponse 500 - 599 

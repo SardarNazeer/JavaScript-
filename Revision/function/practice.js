@@ -889,3 +889,106 @@ console.log(maskAccNum(102026889012));
 // •	delete note
 // •	search note
 // •	update note
+
+
+// JavaScript Functions Practice Questions
+// 1.	Create a function that prints “Hello World”.
+// 2.	Create a function that prints your name.
+// 3.	Create a function that adds two numbers.
+// 4.	Create a function that subtracts two numbers.
+// 5.	Create a function that multiplies two numbers.
+// 6.	Create a function that divides two numbers.
+// 7.	Create a function that checks whether a number is even or odd.
+// 8.	Create a function that checks whether a number is positive or negative.
+// 9.	Create a function that returns the square of a number.
+// 10.	Create a function that returns the cube of a number.
+// 11.	Create a function that converts Celsius to Fahrenheit.
+// 12.	Create a function that converts Fahrenheit to Celsius.
+// 13.	Create a function that calculates the area of a rectangle.
+// 14.	Create a function that calculates the area of a circle.
+// 15.	Create a function that checks whether a number is greater than 100.
+// 16.	Create a function that returns the larger of two numbers.
+// 17.	Create a function that returns the smallest of three numbers.
+// 18.	Create a function that checks whether a number is divisible by 5.
+// 19.	Create a function that prints numbers from 1 to 10.
+// 20.	Create a function that prints the multiplication table of a number.
+// 21.	Create a function that calculates the sum of numbers from 1 to n.
+// 22.	Create a function that counts the total digits in a number.
+// 23.	Create a function that reverses a string.
+// 24.	Create a function that converts a string to uppercase.
+// 25.	Create a function that converts a string to lowercase.
+// 26.	Create a function that checks whether a word is a palindrome.
+// 27.	Create a function that finds the length of a string without using .length.
+// 28.	Create a function that counts vowels in a string.
+// 29.	Create a function that counts consonants in a string.
+// 30.	Create a function that removes spaces from a string.
+// 31.	Create a function that adds all numbers in an array.
+// 32.	Create a function that finds the largest number in an array.
+// 33.	Create a function that finds the smallest number in an array.
+// 34.	Create a function that counts even numbers in an array.
+// 35.	Create a function that counts odd numbers in an array.
+// 36.	Create a function that converts all array elements to uppercase.
+// 37.	Create a function that searches for a value in an array.
+// 38.	Create a function that removes duplicate values from an array.
+// 39.	Create a function that returns the first element of an array.
+// 40.	Create a function that returns the last element of an array.
+// 41.	Create a function that swaps two variables.
+// 42.	Create a function that checks whether a year is a leap year.
+// 43.	Create a function that calculates factorial of a number.
+// 44.	Create a function that generates a random number between 1 and 100.
+// 45.	Create a function that checks whether a number is prime.
+// 46.	Create a function that returns all prime numbers between two numbers.
+// 47.	Create a function that creates a countdown timer using a loop.
+// 48.	Create a function that calculates the average of array values.
+// 49.	Create a function that sorts an array in ascending order.
+// 50.	Create a function that sorts an array in descending order.
+// 51.	Create a function that filters only positive numbers from an array.
+// 52.	Create a function that filters only negative numbers from an array.
+// 53.	Create a function that counts how many times a character appears in a string.
+// 54.	Create a function that replaces a word inside a string.
+// 55.	Create a function that checks whether two strings are equal.
+// 56.	Create a function that merges two arrays.
+// 57.	Create a function that removes falsy values from an array.
+// 58.	Create a function that returns the current date and time.
+// 59.	Create a function that formats a date as DD/MM/YYYY.
+// 60.	Create a function that creates a simple login validation system.
+// 61.	Create a function that checks whether an email is valid.
+// 62.	Create a function that checks password strength.
+// 63.	Create a function that stores user data inside an object.
+// 64.	Create a function that loops through object properties.
+// 65.	Create a function that calculates total price of cart items.
+// 66.	Create a function that applies discount on a product price.
+// 67.	Create a function that creates a reusable counter system.
+// 68.	Create a function that demonstrates local scope and global scope.
+// 69.	Create a function that uses another function inside it.
+// 70.	Create a function that returns another function.
+// 71.	Create a function expression and call it.
+// 72.	Create an arrow function that adds two numbers.
+// 73.	Create an arrow function that returns square of a number.
+// 74.	Create a callback function example.
+// 75.	Create a function that delays execution using setTimeout.
+// 76.	Create a function that repeats execution using setInterval.
+// 77.	Create a function that stops an interval using clearInterval.
+// 78.	Create a function that uses default parameters.
+// 79.	Create a function that uses rest parameters.
+// 80.	Create a function that uses spread operator with arrays.
+// 81.	Create a function that destructures object values.
+// 82.	Create a function that destructures array values.
+// 83.	Create a function that uses nested loops.
+// 84.	Create a function that creates a mini calculator.
+// 85.	Create a function that simulates ATM withdrawal logic.
+// 86.	Create a function that checks stock availability in a product array.
+// 87.	Create a function that generates usernames automatically.
+// 88.	Create a function that masks a phone number.
+// 89.	Create a function that validates form input fields.
+// 90.	Create a function that creates a todo list system.
+// 91.	Create a function that marks completed tasks in a todo array.
+// 92.	Create a function that deletes an item from an array.
+// 93.	Create a function that edits user information inside an object.
+// 94.	Create a function that groups students based on marks.
+// 95.	Create a function that finds duplicate numbers in an array.
+// 96.	Create a function that rotates array elements.
+// 97.	Create a function that flattens a nested array.
+// 98.	Create a function that counts frequency of array elements.
+// 99.	Create a function that creates a search filter system.
+// 100.	Create a function that combines arrays, objects, loops, conditions, and functions in one mini project.

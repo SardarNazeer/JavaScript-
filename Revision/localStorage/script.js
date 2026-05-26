@@ -1,18 +1,144 @@
+// localStorage
+
+// localStorage JavaScript me browser ka ek feature hai
+// jisme hum data save kar sakte hain taake page refresh
+//  hone ke baad bhi data delete na ho.
+
+// localStorage.setItem("key", "value");
+
 // BASIC LEVEL (1–15)
 
 // Save a username in LocalStorage.
+
+// localStorage.setItem("username", "sardar");
+
 // Retrieve and display saved username.
+
+// let user = localStorage.getItem("username");
+// console.log(user);
+
 // Remove a specific key from LocalStorage.
+
+// localStorage.setItem("age", "18");
+
+// localStorage.removeItem("age");
+
 // Clear all LocalStorage data.
+
+// localStorage.clear();
+
 // Check if a key exists in LocalStorage.
+
+// let age = localStorage.getItem("age");
+// console.log(age);
+
 // Store a number and retrieve it.
+
+// localStorage.setItem("marks", 89);
+
+// let marks = Number(localStorage.getItem("marks"));
+// console.log(marks);
+// console.log(typeof marks);
+
 // Store a boolean value (true/false).
+
+// localStorage.setItem("isLoggedIn", true);
+
+// let loggedIn = localStorage.getItem("isLoggedIn") === "true";
+
+// console.log(loggedIn);
+// console.log(typeof loggedIn);
+
 // Update an existing LocalStorage value.
+
+// localStorage.setItem("marks", 99);
+
+// let num = localStorage.getItem("marks");
+
+// console.log(num);
+
 // Count total keys in LocalStorage.
+
+// let totalkeys = localStorage.length;
+// console.log(totalkeys);
+
 // Loop through all LocalStorage keys and print them.
+
+// for (let i = 0; i < localStorage.length; i++) {
+//   let key = localStorage.key(i);
+//   console.log(key);
+// }
+
 // Save user input from an input field.
 // Display saved input after page reload.
+
+// Save user input from an input field.
+// Display saved input after page reload.
+
+let form = document.querySelector("form");
+let input = document.querySelector("input");
+
+let h2 = document.createElement("h2");
+
+document.body.appendChild(h2);
+
+// Reload par saved text show
+window.addEventListener("load", function () {
+  let loadData = localStorage.getItem("value");
+
+  console.log(loadData);
+
+  if (loadData) {
+    h2.textContent = loadData;
+  }
+});
+
+// Submit par save
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  let inputVal = input.value;
+
+  console.log(inputVal);
+
+  localStorage.setItem("value", inputVal);
+
+  h2.textContent = inputVal;
+
+  input.value = "";
+});
+
 // Create a simple dark/light mode toggle and store preference.
+
+let darkMode = document.querySelector(".dark");
+let lightMode = document.querySelector(".light");
+let body = document.querySelector("body");
+
+window.addEventListener("load", function () {
+  let savedPreference = localStorage.getItem("mode");
+
+  if (savedPreference == "dark") {
+    body.style.backgroundColor = "black";
+    body.style.color = "white";
+  } else {
+    body.style.backgroundColor = "white";
+    body.style.color = "black";
+  }
+});
+
+darkMode.addEventListener("click", function () {
+  body.style.backgroundColor = "black";
+  body.style.color = "white";
+
+  localStorage.setItem("mode", "dark");
+});
+
+lightMode.addEventListener("click", function () {
+  body.style.backgroundColor = "white";
+  body.style.color = "black";
+  localStorage.setItem("mode", "light");
+});
+
 // Store user's age and show message based on age.
 // Save multiple values using different keys.
 
@@ -80,7 +206,6 @@
 // 18. Build a progress bar that fills up to 100% and stops.
 // 19. Simulate API calls every 3 seconds and stop with a button.
 // 20. Implement debounce logic to control multiple rapid function calls.
-
 
 // 🔥 PRO TIP (Important)
 
